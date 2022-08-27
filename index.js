@@ -5,7 +5,9 @@ const wb = new xl.Workbook();
 const ws = wb.addWorksheet('CountriesList');
 
 
-// Styling the font size and font color
+// Styling the Excel sheet
+
+// font size and font color
 
 var style = wb.createStyle({
     font: {
@@ -44,6 +46,8 @@ ws.cell(2, 3)
 ws.cell(2, 4)
     .string('Currencies').style(style);
 
+// formating the data from API
+
 function formatCapital(capital) {
     if (capital && capital.length > 0) {
         return capital.join(', ');
@@ -60,7 +64,8 @@ function formatCurrency(currencies) {
     }
 }
 
-//getting data from API
+// getting data from API
+console.log("Getting data from API");
 const url = "https://restcountries.com/v3.1/all";
 fetch(url)
     .then((data) => data.json()).then(countriesInfo => {
@@ -72,6 +77,8 @@ fetch(url)
         });
 
         // Passing data to excel file
+
+        console.log("Creating excel file");
         let row = 3;
         countriesInfo.forEach(countries => {
             if (!countries.area) {
@@ -84,6 +91,7 @@ fetch(url)
             row++;
         });
         wb.write('CountriesList.xlsx');
+        console.log("Your excel file is ready");
     }).catch(err => {
         console.log(err);
     });

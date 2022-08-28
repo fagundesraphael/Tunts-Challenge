@@ -13,16 +13,17 @@ Esse repositório contém a resolução do desafio proposto pela <b>Tunts.Rocks<
 ## Requirements
 
 **Note:** To run this project you must have Node.js installed on your machine.
+You can download and install Nodejs here - [Node.js](https://nodejs.org/en/)
 
 ## Instructions
 
-Clone the repository:
+Clone the repository:<br>
 `$ git clone https://github.com/fagundesraphael/Tunts-Challenge.git`
 
-install the dependecies:
+install the dependecies:<br>
 `$ npm install`
 
-Run the application:
+Run the application:<br>
 `$ npm start`
 
 <b>A file named CountriesList.xlsx will be created on your local folder</b>

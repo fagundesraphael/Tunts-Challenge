@@ -46,23 +46,7 @@ ws.cell(2, 3)
 ws.cell(2, 4)
     .string('Currencies').style(style);
 
-// formating the data from API
 
-function formatCapital(capital) {
-    if (capital && capital.length > 0) {
-        return capital.join(', ');
-    } else {
-        return '-';
-    }
-}
-
-function formatCurrency(currencies) {
-    if (currencies && Object.keys(currencies).length > 0) {
-        return Object.keys(currencies).join(", ");
-    } else {
-        return '-';
-    }
-}
 
 // getting data from API
 console.log("Getting data from API");
@@ -95,3 +79,20 @@ fetch(url)
     }).catch(err => {
         console.log(err);
     });
+// formating the data from API
+
+function formatCapital(capital) {
+    if (capital && capital.length > 0) {
+        return capital.join(', ');
+    } else {
+        return '-';
+    }
+}
+
+function formatCurrency(currencies) {
+    if (currencies && Object.keys(currencies).length > 0) {
+        return Object.keys(currencies).join(", ");
+    } else {
+        return '-';
+    }
+}

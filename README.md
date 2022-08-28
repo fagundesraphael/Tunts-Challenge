@@ -12,7 +12,7 @@ Esse repositório contém a resolução do desafio proposto pela <b>Tunts.Rocks<
 
 ## Requirements
 
-**Note:** To run this project you must have Node.js installed on your machine.
+**Note:** To run this project you must have Node.js installed on your machine.<br>
 You can download and install Nodejs here - [Node.js](https://nodejs.org/en/)
 
 ## Instructions
